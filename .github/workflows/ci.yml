@@ -23,3 +23,4 @@ jobs:
           git pull --rebase
           git commit --allow-empty -m "test"
           git push
+          echo 1
