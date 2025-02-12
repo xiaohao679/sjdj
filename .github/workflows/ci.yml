@@ -5,7 +5,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: '0 0/8 * * *'
+    - cron: '* * * * *'
 
 jobs:
   autogreen:
@@ -16,8 +16,8 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email "zeemenng@gmail.com"
-          git config --local user.name "Zee"
+          git config --local user.email "lzh062106@vip.qq.com"
+          git config --local user.name "xiaobingbaby"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "自动点绿"
